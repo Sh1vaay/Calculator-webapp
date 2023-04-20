@@ -1,0 +1,125 @@
+/* Calculator container */
+.calculator {
+  width: 320px;
+  margin: 210px auto;
+  padding: 60px;
+  border: 1px solid #8770fd;
+  border-radius: 15px;
+  background-color: #f7f7f7;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.center {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  color: rgb(247, 244, 253);
+}
+/* Calculator display */
+.display {
+  height: 200px;
+  border: 2px solid #8770fd;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: right;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Calculator keys */
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+/* Calculator key styles */
+button {
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #f7f7f7;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Operator key styles */
+button.operator {
+  background-color: #8770fd;
+  color: #fff;
+}
+button.operator:hover {
+  background-color: #c3b7fa;
+}
+
+button.num {
+  background-color: #2d3b75;
+  color: #fff;
+}
+button.num:hover {
+  background-color: #545b74;
+}
+
+button.other {
+  background-color: #f5f5f5;
+  color: #000000;
+}
+button.other:hover {
+  background-color: #65719a;
+}
+
+/* Highlight on active key */
+button:active {
+  transform: translateY(2px);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Highlight on hover */
+button:hover {
+  background-color: #f5f5f5;
+}
+/* Wide decimal key */
+#decimal {
+  grid-column: 3 / span 2;
+}
+
+/* Wide clear key */
+#clear {
+  grid-column: 1 / span 2;
+}
+
+/* Wide equals key */
+#equals {
+  grid-column: 3 / span 2;
+}
+
+/* Add margin between numbers and operators */
+button:not(.operator):not(#zero) {
+  margin-right: 5px;
+}
+
+/* Add margin between rows */
+button:nth-child(n + 5) {
+  margin-top: 5px;
+}
+body {
+  background: linear-gradient(125deg, #f62b48, #1e73c3, #f62b48);
+  background-size: 400%;
+  animation: bganimation 15s infinite;
+}
+@keyframes bganimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
